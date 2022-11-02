@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    background-color: #111;
+}
+.salute {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.salute__text {
+    flex: 3;
+}
+.salute__img {
+    flex: 1;
+}
+.saluteText {
+    color: #333;
+    font-size: 60vw;
+    cursor: default;
+    user-select: none;
+}
+.saluteImg {
+    width: 100%;
+}
+.intro__name {
+    height: 100vh;
+    background: #0077B6;
+}
+.name {
+    font-size: 16vw;
+    color: #333;
+    cursor: default;
+    text-align: center;
+    line-height: 100vh;
+}
+.intro__jobTitle {
+    height: 100vh;
+}
+.dark {
+    background: url("./images/bg1.png");
+}
+.blue {
+    background: #0077B6 url("./images/bg2.png");
+}
+.jobTitle {
+    font-size: 10vw;
+    color: #333;
+    line-height: 100vh;
+    cursor: default;
+}
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30vh;
+    padding: 0 100px;
+}
+.projects__title {
+    font-size: 10vw;
+    font-weight: 700;
+    color: #333;
+}
+.project {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: 100vh;
+    overflow: hidden;
+}
+.project__phone {
+    position: relative;
+    width: 300px;
+    height: 600px;
+}
+.phone__screen {
+    width: 264px;
+    height: 567px;
+    position: absolute;
+    top: 17px;
+    left: 18px;
+    border-radius: 28px;
+    overflow: scroll;
+}
+.phone__screen::-webkit-scrollbar {
+    display: none;
+}
+.phone__app {
+    width: 100%;
+}
+.project__detail {
+
+}
+.project-title {
+
+}
+.project-description {
+
+}
+.project-btn {
+    
+}
