@@ -75,7 +75,11 @@ html {
     height: 100vh;
     overflow: hidden;
 }
+.project:nth-child(2n) {
+    flex-direction: row-reverse;
+}
 .project__phone {
+    flex: 1;
     position: relative;
     width: 300px;
     height: 600px;
@@ -96,14 +100,110 @@ html {
     width: 100%;
 }
 .project__detail {
-
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
 }
 .project-title {
-
+    font-size: 7vw;
+    color: #555;
 }
 .project-description {
-
+    font-size: 20px;
+    color: #555;
+    text-align: justify;
+    line-height: 40px;
 }
 .project-btn {
-    
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #555;
+    outline: none;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.project-btn::after {
+    content: "View Demo";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    color: #222;
+    background: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s all;
+}
+.project-btn:hover::after {
+    transform: translateX(100%);
+}
+.project__laptop {
+    width: 600px;
+    height: 379px;
+    flex: 1;
+    position: relative;
+}
+.laptop__screen {
+    width: 541px;
+    height: 283px;
+    position: absolute;
+    top: 18px;
+    left: 68px;
+    overflow: scroll;
+}
+.laptop__app {
+    width: 83.5%;
+}
+.laptop__screen::-webkit-scrollbar {
+    display: none;
+}
+.github {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.github__title {
+    font-size: 100px;
+    color: #333;
+}
+.github__chart {
+    width: 820px;
+    text-align: center;
+}
+.dates {
+    padding: 10px;
+    color: #555;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+.boxChart {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.box {
+    width: 15px;
+    height: 15px;
+    background: #171c25;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 3s all ease;
+}
+.active:nth-child(4n) {
+    background: #195b2c;
+}
+.github__chart:hover .active:nth-child(2n+1) {
+    background: #195b2c;
+}
+.github__chart:hover .active:nth-child(2n) {
+    background: #063f24;
 }
