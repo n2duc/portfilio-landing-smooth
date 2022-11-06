@@ -9,6 +9,7 @@ html {
 }
 .container {
     background-color: #111;
+    overflow: hidden;
 }
 .salute {
     height: 100vh;
@@ -53,6 +54,7 @@ html {
 }
 .jobTitle {
     font-size: 10vw;
+    font-weight: 700;
     color: #333;
     line-height: 100vh;
     cursor: default;
@@ -150,7 +152,7 @@ html {
     position: relative;
 }
 .laptop__screen {
-    width: 541px;
+    width: 451px;
     height: 283px;
     position: absolute;
     top: 18px;
@@ -158,7 +160,7 @@ html {
     overflow: scroll;
 }
 .laptop__app {
-    width: 83.5%;
+    width: 100%;
 }
 .laptop__screen::-webkit-scrollbar {
     display: none;
@@ -173,6 +175,7 @@ html {
 .github__title {
     font-size: 100px;
     color: #333;
+    text-align: center;
 }
 .github__chart {
     width: 820px;
@@ -206,4 +209,46 @@ html {
 }
 .github__chart:hover .active:nth-child(2n) {
     background: #063f24;
+}
+.githubSm {
+    display: none;
+}
+
+@media screen and (max-width:1024px) {
+
+    .projects {
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .project {
+        flex-direction: column;
+        height: max-content;
+    }
+    .project:nth-child(2n){
+        flex-direction: column;
+    }
+
+    .project__phone,
+    .project__laptop {
+        transform: none !important;
+    }
+    
+    .github__chart {
+        display: none;
+    }
+
+    .github__title {
+        text-align: center;
+        font-size: 10vw;
+    }
+    .githubSm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        color:#555;
+        font-size: 30px;
+        text-align: center;
+    }
 }

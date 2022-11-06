@@ -1,4 +1,13 @@
 const boxChart = document.querySelector('.boxChart')
+const saluteText = document.querySelector('.salute__text')
+const saluteImg = document.querySelector('.salute__img')
+const nameAuthor = document.querySelector('.name')
+const jobTitleBGs = document.querySelectorAll('.intro__jobTitle')
+const jobTitles = document.querySelectorAll('.jobTitle')
+const projectsTitle = document.querySelector('.projects__title')
+const phones = document.querySelectorAll('.project__phone')
+const laptop = document.querySelector('.project__laptop')
+
 for (let i = 0; i < 365; i++) {
     const list = [
         0, 1, 2, 3, 41, 42, 43, 44, 82, 83, 123, 124, 125, 126, 164, 165, 166, 167,
@@ -19,3 +28,18 @@ for (let i = 0; i < 365; i++) {
     el.classList = list.includes(i) ? "box active" : "box"
     boxChart.appendChild(el)
 }
+
+window.addEventListener('scroll', () => {
+    let offsetY = window.scrollY
+    saluteText.style.transform = `translateY(${offsetY / 10}px)`
+    saluteImg.style.transform = `translate(${offsetY * 0.4}px, ${offsetY * 0.7}px)`
+    nameAuthor.style.transform = `translateX(${offsetY * 0.1}px)`
+    jobTitleBGs[0].style.backgroundPositionY = `${offsetY * 0.5}px`
+    jobTitleBGs[1].style.backgroundPositionY = `${-offsetY * 0.5}px`
+    jobTitles[0].style.transform = `translateX(calc(200vh - ${offsetY}px))`
+    jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`
+    projectsTitle.style.transform = `translateY(calc(400vh - ${offsetY}px))`
+    phones[0].style.transform = `translateX(calc(500vh - ${offsetY}px))`
+    laptop.style.transform = `translateX(calc(610vh - ${offsetY}px))`
+    phones[1].style.transform = `translateX(calc(750vh - ${offsetY}px))`
+})
